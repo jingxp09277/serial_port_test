@@ -1,11 +1,13 @@
+package util;
+
 import com.fazecast.jSerialComm.SerialPort;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
 
-public class Startup {
-    public static void main(String[] args) {
+public class SerialPortUtil {
+    public void serialport(){
         SerialPort[] ports = SerialPort.getCommPorts();
         System.out.println("Select a port:");
         int i = 1;
@@ -55,5 +57,3 @@ public class Startup {
         //System.out.println("\t\n");
     }
 }
-
-

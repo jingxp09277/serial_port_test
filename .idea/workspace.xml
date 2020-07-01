@@ -1,18 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ff2165b-53af-40a7-a045-4351f27e687f" name="Default Changelist" comment="" />
+    <list default="true" id="5ff2165b-53af-40a7-a045-4351f27e687f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/liquidlnf.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/form/MainFrom.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/form/MainFrom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/form/SettingForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/form/SettingForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/frame/MainFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/panel/MainPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/panel/SpendPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/panel/WorkingPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/CmdAndResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/CenterPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/ExecelUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/GUIUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/SerialPortUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Startup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/startup/Bootstrap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ask/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Startup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ask/App.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -27,6 +69,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1e28nMC0j7OXVGb18RLvTzdTthB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -34,25 +77,87 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hutubill" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager">
-    <configuration name="Startup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Startup" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\java_Project\serial_test\lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Bootstrap">
+    <configuration name="Bootstrap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="startup.Bootstrap" />
       <module name="serial_test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExecelUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="util.ExecelUtil" />
+      <module name="serial_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.frame.MainFrame" />
+      <module name="serial_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.frame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.panel.MainPanel" />
+      <module name="serial_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.panel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpendPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.panel.SpendPanel" />
+      <module name="serial_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.panel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Startup" />
+        <item itemvalue="Application.Bootstrap" />
+        <item itemvalue="Application.ExecelUtil" />
+        <item itemvalue="Application.MainFrame" />
+        <item itemvalue="Application.MainPanel" />
+        <item itemvalue="Application.SpendPanel" />
       </list>
     </recent_temporary>
   </component>
@@ -66,41 +171,99 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593508492698</updated>
-      <workItem from="1593508494258" duration="6663000" />
+      <workItem from="1593508494258" duration="7168000" />
+      <workItem from="1593565259042" duration="35916000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="1074" y="296" key="FileChooserDialogImpl" timestamp="1593511192184">
+    <state x="1071" y="345" key="#Project_Structure" timestamp="1593592476963">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state x="1074" y="296" key="FileChooserDialogImpl/63.0.1857.1080@63.0.1857.1080" timestamp="1593511192184" />
-    <state width="1797" height="292" key="GridCell.Tab.0.bottom" timestamp="1593515025858">
+    <state x="1071" y="345" key="#Project_Structure/63.0.1857.1080@63.0.1857.1080" timestamp="1593592476963" />
+    <state x="1289" y="359" key="#com.intellij.ide.util.MemberChooser" timestamp="1593606528357">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1797" height="292" key="GridCell.Tab.0.bottom/63.0.1857.1080@63.0.1857.1080" timestamp="1593515025858" />
-    <state width="1797" height="292" key="GridCell.Tab.0.center" timestamp="1593515025858">
+    <state x="1289" y="359" key="#com.intellij.ide.util.MemberChooser/63.0.1857.1080@63.0.1857.1080" timestamp="1593606528357" />
+    <state x="93" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1593588793281">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1797" height="292" key="GridCell.Tab.0.center/63.0.1857.1080@63.0.1857.1080" timestamp="1593515025858" />
-    <state width="1797" height="292" key="GridCell.Tab.0.left" timestamp="1593515025858">
+    <state x="93" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/63.0.1857.1080@63.0.1857.1080" timestamp="1593588793281" />
+    <state x="1197" y="302" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1593597307576">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1797" height="292" key="GridCell.Tab.0.left/63.0.1857.1080@63.0.1857.1080" timestamp="1593515025858" />
-    <state width="1797" height="292" key="GridCell.Tab.0.right" timestamp="1593515025858">
+    <state x="1197" y="302" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/63.0.1857.1080@63.0.1857.1080" timestamp="1593597307576" />
+    <state x="1074" y="296" key="FileChooserDialogImpl" timestamp="1593591960920">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1797" height="292" key="GridCell.Tab.0.right/63.0.1857.1080@63.0.1857.1080" timestamp="1593515025858" />
-    <state x="709" y="193" key="SettingsEditor" timestamp="1593514963591">
+    <state x="1074" y="296" key="FileChooserDialogImpl/63.0.1857.1080@63.0.1857.1080" timestamp="1593591960920" />
+    <state width="1797" height="292" key="GridCell.Tab.0.bottom" timestamp="1593606831768">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state x="709" y="193" key="SettingsEditor/63.0.1857.1080@63.0.1857.1080" timestamp="1593514963591" />
+    <state width="1797" height="292" key="GridCell.Tab.0.bottom/63.0.1857.1080@63.0.1857.1080" timestamp="1593606831768" />
+    <state width="1797" height="292" key="GridCell.Tab.0.center" timestamp="1593606831768">
+      <screen x="63" y="0" width="1857" height="1080" />
+    </state>
+    <state width="1797" height="292" key="GridCell.Tab.0.center/63.0.1857.1080@63.0.1857.1080" timestamp="1593606831768" />
+    <state width="1797" height="292" key="GridCell.Tab.0.left" timestamp="1593606831768">
+      <screen x="63" y="0" width="1857" height="1080" />
+    </state>
+    <state width="1797" height="292" key="GridCell.Tab.0.left/63.0.1857.1080@63.0.1857.1080" timestamp="1593606831768" />
+    <state width="1797" height="292" key="GridCell.Tab.0.right" timestamp="1593606831768">
+      <screen x="63" y="0" width="1857" height="1080" />
+    </state>
+    <state width="1797" height="292" key="GridCell.Tab.0.right/63.0.1857.1080@63.0.1857.1080" timestamp="1593606831768" />
+    <state width="1797" height="368" key="GridCell.Tab.1.bottom" timestamp="1593596568795">
+      <screen x="63" y="0" width="1857" height="1080" />
+    </state>
+    <state width="1797" height="368" key="GridCell.Tab.1.bottom/63.0.1857.1080@63.0.1857.1080" timestamp="1593596568795" />
+    <state width="1797" height="368" key="GridCell.Tab.1.center" timestamp="1593596568794">
+      <screen x="63" y="0" width="1857" height="1080" />
+    </state>
+    <state width="1797" height="368" key="GridCell.Tab.1.center/63.0.1857.1080@63.0.1857.1080" timestamp="1593596568794" />
+    <state width="1797" height="368" key="GridCell.Tab.1.left" timestamp="1593596568794">
+      <screen x="63" y="0" width="1857" height="1080" />
+    </state>
+    <state width="1797" height="368" key="GridCell.Tab.1.left/63.0.1857.1080@63.0.1857.1080" timestamp="1593596568794" />
+    <state width="1797" height="368" key="GridCell.Tab.1.right" timestamp="1593596568794">
+      <screen x="63" y="0" width="1857" height="1080" />
+    </state>
+    <state width="1797" height="368" key="GridCell.Tab.1.right/63.0.1857.1080@63.0.1857.1080" timestamp="1593596568794" />
+    <state x="514" y="295" key="Maven.ArtifactSearchDialog" timestamp="1593592143636">
+      <screen x="63" y="0" width="1857" height="1080" />
+    </state>
+    <state x="514" y="295" key="Maven.ArtifactSearchDialog/63.0.1857.1080@63.0.1857.1080" timestamp="1593592143636" />
+    <state x="709" y="193" key="SettingsEditor" timestamp="1593604288314">
+      <screen x="63" y="0" width="1857" height="1080" />
+    </state>
+    <state x="709" y="193" key="SettingsEditor/63.0.1857.1080@63.0.1857.1080" timestamp="1593604288314" />
     <state x="729" y="458" width="626" height="490" key="find.popup" timestamp="1593509827813">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
     <state x="729" y="458" width="626" height="490" key="find.popup/63.0.1857.1080@63.0.1857.1080" timestamp="1593509827813" />
+    <state x="359" y="341" key="new project wizard" timestamp="1593591974840">
+      <screen x="63" y="0" width="1857" height="1080" />
+    </state>
+    <state x="359" y="341" key="new project wizard/63.0.1857.1080@63.0.1857.1080" timestamp="1593591974840" />
+    <state x="647" y="331" width="672" height="678" key="search.everywhere.popup" timestamp="1593596588725">
+      <screen x="63" y="0" width="1857" height="1080" />
+    </state>
+    <state x="647" y="331" width="672" height="678" key="search.everywhere.popup/63.0.1857.1080@63.0.1857.1080" timestamp="1593596588725" />
   </component>
 </project>
