@@ -1,18 +1,26 @@
 package gui.form;
 
 import com.fazecast.jSerialComm.SerialPort;
+import gui.frame.MainFrame;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SettingForm extends JFrame {
+public class SettingForm  {
     public static SettingForm instance = new SettingForm();
 
     private JTextField tf_folderName;
     private JButton bt_updateFolder;
     private JComboBox<String> cb_port;
     private JButton bt_openPort;
+    public String filePath;
+    public SerialPort chosenPort;
+
+    public JPanel getRootForm() {
+        return rootForm;
+    }
+
     private JPanel rootForm;
     private JComboBox<Integer> cb_Baudrate;
     private JComboBox<Integer> cb_DataBytes;
@@ -23,10 +31,10 @@ public class SettingForm extends JFrame {
     SerialPort[] ports;
 
     public SettingForm() {
-        add(rootForm);
-        setTitle("串口检测");
-        setSize(800, 600);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        add(rootForm);
+//        setTitle("串口检测");
+//        setSize(800, 600);
+//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         initComponent();
 
@@ -35,14 +43,17 @@ public class SettingForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(cb_port.getItemCount()!=0){
-                    SerialPort chosenPort = ports[cb_port.getSelectedIndex()];
+                    chosenPort = ports[cb_port.getSelectedIndex()];
                     chosenPort.setComPortParameters((int)cb_Baudrate.getSelectedItem(),(int)cb_DataBytes.getSelectedItem(),1,0);
                     chosenPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
                     if (chosenPort.openPort()) {
                         System.out.println("gettext:"+tf_folderName.getText());
-                        MainFrom.instance.setPathname(tf_folderName.getText());
-
-                        MainFrom.instance.setVisible(true);
+                        MainFrame.instance.settingFormPanel.setEnabled(false);
+                        MainFrame.instance.settingFormPanel.setVisible(false);
+                        MainFrame.instance.mainFromPanel.setVisible(true);
+                        MainFrame.instance.mainFromPanel.setEnabled(true);
+                        MainFrom.instance.startListenSerialPort();
+                        filePath = tf_folderName.getText();
                     } else {
                         JOptionPane.showMessageDialog(rootForm, "打开串口失败", "Failure",JOptionPane.WARNING_MESSAGE);
                     }

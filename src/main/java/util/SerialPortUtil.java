@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.util.Scanner;
 
 public class SerialPortUtil {
-    public void serialport(){
+    public void serialport() {
         SerialPort[] ports = SerialPort.getCommPorts();
         System.out.println("Select a port:");
         int i = 1;
@@ -19,7 +19,7 @@ public class SerialPortUtil {
         int chosenPortID = scanner.nextInt();
 
         SerialPort chosenPort = ports[chosenPortID - 1];
-        chosenPort.setComPortParameters(9600,8,1,0);
+        chosenPort.setComPortParameters(9600, 8, 1, 0);
         chosenPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
         if (chosenPort.openPort()) {
             System.out.println("Successfully opened the port");
@@ -33,11 +33,11 @@ public class SerialPortUtil {
 
         byte[] readB = new byte[50];
         int nBytes = 0;
-        while(true){
+        while (true) {
             try {
-                while (inputStream.available()>0){
+                while (inputStream.available() > 0) {
                     nBytes = inputStream.read(readB);
-                    printHexString(readB,nBytes);
+                    printHexString(readB, nBytes);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -48,12 +48,12 @@ public class SerialPortUtil {
 
     public static void printHexString(byte[] b, int nBytes) {
         for (int i = 0; i < nBytes; i++) {
-            String hex = Integer.toHexString(b[i] & 0xFF)+" ";
+            String hex = Integer.toHexString(b[i] & 0xFF) + " ";
             if (hex.length() == 2) {
                 hex = '0' + hex;
             }
-            System.out.print(hex.toUpperCase() );
-        }
+            System.out.print(hex.toUpperCase()+" ");
+    }
         //System.out.println("\t\n");
     }
 }

@@ -1,9 +1,11 @@
 package model;
 
+import java.util.ArrayList;
+
 public class CmdAndResult {
     int cmdIndex;
     String cmd;
-    String sericalPortProtocolValue;
+    ArrayList<Byte> sericalPortProtocolValue;
     int reusltTimes;
     int falseWakeTimes;
     int missingTimes;
@@ -24,11 +26,11 @@ public class CmdAndResult {
         this.cmd = cmd;
     }
 
-    public String getSericalPortProtocolValue() {
+    public ArrayList<Byte> getSericalPortProtocolValue() {
         return sericalPortProtocolValue;
     }
 
-    public void setSericalPortProtocolValue(String sericalPortProtocolValue) {
+    public void setSericalPortProtocolValue(ArrayList<Byte> sericalPortProtocolValue) {
         this.sericalPortProtocolValue = sericalPortProtocolValue;
     }
 

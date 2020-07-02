@@ -14,6 +14,8 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import static util.StringUtil.hexStringsToByte;
+
 public class ExecelUtil {
     public static CmdAndResult[] readExcelInfo(String pathname) throws Exception {
         return readExcelInfo(pathname, 0);
@@ -64,7 +66,16 @@ public class ExecelUtil {
                 CmdAndResult mCmdAndResult = new CmdAndResult();
                 mCmdAndResult.setCmdIndex((int) Double.parseDouble(list.get(0)));//命令词序号
                 mCmdAndResult.setCmd(list.get(1));//命令词名称
-                mCmdAndResult.setSericalPortProtocolValue(list.get(2));//命令词指令值
+
+                ArrayList<Byte> arrayList = new ArrayList<>();
+                String[] arr = list.get(2).split("\\s+");
+                for (String ss : arr
+                ) {
+                    arrayList.add(hexStringsToByte(ss)[0]);
+//                            ss.toUpperCase());
+                }
+
+                mCmdAndResult.setSericalPortProtocolValue(arrayList);//命令词指令值
                 System.out.println("CmdIndex : " + mCmdAndResult.getCmdIndex() + " " +
                         "Cmd : " + mCmdAndResult.getCmd() + " " +
                         "SericalPortProtocolValue : " + mCmdAndResult.getSericalPortProtocolValue()
@@ -96,4 +107,5 @@ public class ExecelUtil {
     public static void main(String[] args) throws Exception {
         readExcelInfo("C:\\Users\\LWB\\Desktop\\cmd.xls");
     }
+
 }
