@@ -9,7 +9,16 @@ public class CmdAndResult {
     int reusltTimes;
     int falseWakeTimes;
     int missingTimes;
+    HashSet<Integer> maskBit;
 
+    public HashSet<Integer> getMaskBit() {
+        return maskBit;
+    }
+
+    public void setMaskBit(HashSet<Integer> maskBit) {
+        this.maskBit = maskBit;
+    }  
+    
     public int getCmdIndex() {
         return cmdIndex;
     }
