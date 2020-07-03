@@ -68,13 +68,18 @@ public class ExecelUtil {
                 mCmdAndResult.setCmd(list.get(1));//命令词名称
 
                 ArrayList<Byte> arrayList = new ArrayList<>();
+                HashSet<Integer> integerSet = new HashSet<>();
                 String[] arr = list.get(2).split("\\s+");
-                for (String ss : arr
+                for (int j = 0; j<arr.length;j++
                 ) {
-                    arrayList.add(hexStringsToByte(ss)[0]);
+                    if(arr[j].equals("XX")){
+                        integerSet.add(j);
+                        System.out.println("heeeee"+integerSet.toString());
+                    }
+                    arrayList.add(hexStringsToByte(arr[j])[0]);
 //                            ss.toUpperCase());
                 }
-
+                mCmdAndResult.setMaskBit(integerSet);
                 mCmdAndResult.setSericalPortProtocolValue(arrayList);//命令词指令值
                 System.out.println("CmdIndex : " + mCmdAndResult.getCmdIndex() + " " +
                         "Cmd : " + mCmdAndResult.getCmd() + " " +
