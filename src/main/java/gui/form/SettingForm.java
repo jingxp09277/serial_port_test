@@ -14,7 +14,8 @@ public class SettingForm  {
     private JButton bt_updateFolder;
     private JComboBox<String> cb_port;
     private JButton bt_openPort;
-    public String filePath;
+    public String execelfilePath;
+    public String musicFilePath;
     public SerialPort chosenPort;
 
     public JPanel getRootForm() {
@@ -25,6 +26,8 @@ public class SettingForm  {
     private JComboBox<Integer> cb_Baudrate;
     private JComboBox<Integer> cb_DataBytes;
     private JButton refreshPort;
+    private JTextField tf_musicFolders;
+    private JButton bt_updataMusicFolder;
 
     private int[] baudrate = {9600, 19200, 38400, 57600, 115200};
     private int[] dataBytes = {5,6,7,8};
@@ -53,7 +56,9 @@ public class SettingForm  {
                         MainFrame.instance.mainFromPanel.setVisible(true);
                         MainFrame.instance.mainFromPanel.setEnabled(true);
                         MainFrom.instance.startListenSerialPort();
-                        filePath = tf_folderName.getText();
+                        execelfilePath = tf_folderName.getText();
+                        musicFilePath = tf_musicFolders.getText();
+                        MainFrom.instance.playAudio();
                     } else {
                         JOptionPane.showMessageDialog(rootForm, "打开串口失败", "Failure",JOptionPane.WARNING_MESSAGE);
                     }
@@ -79,7 +84,8 @@ public class SettingForm  {
             cb_DataBytes.addItem(value);
         }
         cb_DataBytes.setSelectedItem(8);
-        tf_folderName.setText("C:\\Users\\LWB\\Desktop\\cmd.xls");
+        tf_folderName.setText(".\\cmd.xls");
+        tf_musicFolders.setText(".\\allAudio");
     }
 
     private void updateStatue(){

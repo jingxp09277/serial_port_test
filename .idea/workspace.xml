@@ -2,25 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ff2165b-53af-40a7-a045-4351f27e687f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/music/AudioPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/form/MainFrom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/form/MainFrom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/form/SettingForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/form/SettingForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/form/SettingForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/form/SettingForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/frame/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/frame/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/CmdAndResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/CmdAndResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/panel/MainPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/panel/SpendPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/panel/WorkingPanel.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/startup/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/startup/Bootstrap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/ExecelUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ExecelUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/SerialPortUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/SerialPortUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/ask/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/form/MainFrom$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/form/MainFrom$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/form/MainFrom$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/form/MainFrom$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/form/MainFrom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/form/MainFrom.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/form/SettingForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/form/SettingForm$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/form/SettingForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/form/SettingForm$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/form/SettingForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/form/SettingForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/frame/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/frame/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/CmdAndResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/CmdAndResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/startup/Bootstrap$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/startup/Bootstrap$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/ExecelUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/ExecelUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/SerialPortUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/SerialPortUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/StringUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/ask/AppTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -89,6 +88,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Bootstrap">
+    <configuration name="AudioPlayer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="music.AudioPlayer" />
+      <module name="serial_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="music.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Bootstrap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="startup.Bootstrap" />
       <module name="serial_test" />
@@ -109,25 +121,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.frame.MainFrame" />
+    <configuration name="Sound" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="music.Sound" />
       <module name="serial_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gui.frame.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.panel.MainPanel" />
-      <module name="serial_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gui.panel.*" />
+          <option name="PATTERN" value="music.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -151,10 +150,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Bootstrap" />
+        <item itemvalue="Application.AudioPlayer" />
+        <item itemvalue="Application.Sound" />
         <item itemvalue="Application.StringUtil" />
         <item itemvalue="Application.ExecelUtil" />
-        <item itemvalue="Application.MainFrame" />
-        <item itemvalue="Application.MainPanel" />
       </list>
     </recent_temporary>
   </component>
@@ -171,6 +170,8 @@
       <workItem from="1593508494258" duration="7168000" />
       <workItem from="1593565259042" duration="36136000" />
       <workItem from="1593651958939" duration="31512000" />
+      <workItem from="1593691620457" duration="1359000" />
+      <workItem from="1593738499157" duration="30070000" />
     </task>
     <servers />
   </component>
@@ -195,10 +196,10 @@
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
     <state x="1071" y="345" key="#Project_Structure/63.0.1857.1080@63.0.1857.1080" timestamp="1593592476963" />
-    <state x="1289" y="359" key="#com.intellij.ide.util.MemberChooser" timestamp="1593681668116">
+    <state x="1289" y="359" key="#com.intellij.ide.util.MemberChooser" timestamp="1593746816161">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state x="1289" y="359" key="#com.intellij.ide.util.MemberChooser/63.0.1857.1080@63.0.1857.1080" timestamp="1593681668116" />
+    <state x="1289" y="359" key="#com.intellij.ide.util.MemberChooser/63.0.1857.1080@63.0.1857.1080" timestamp="1593746816161" />
     <state x="93" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1593588793281">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
@@ -215,58 +216,62 @@
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
     <state x="1074" y="296" key="FileChooserDialogImpl/63.0.1857.1080@63.0.1857.1080" timestamp="1593591960920" />
-    <state width="1797" height="285" key="GridCell.Tab.0.bottom" timestamp="1593691578961">
+    <state width="1373" height="173" key="GridCell.Tab.0.bottom" timestamp="1593775069645">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1797" height="285" key="GridCell.Tab.0.bottom/63.0.1857.1080@63.0.1857.1080" timestamp="1593691578961" />
-    <state width="1797" height="285" key="GridCell.Tab.0.center" timestamp="1593691578961">
+    <state width="1373" height="173" key="GridCell.Tab.0.bottom/63.0.1857.1080@63.0.1857.1080" timestamp="1593775069645" />
+    <state width="1373" height="173" key="GridCell.Tab.0.center" timestamp="1593775069645">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1797" height="285" key="GridCell.Tab.0.center/63.0.1857.1080@63.0.1857.1080" timestamp="1593691578961" />
-    <state width="1797" height="285" key="GridCell.Tab.0.left" timestamp="1593691578961">
+    <state width="1373" height="173" key="GridCell.Tab.0.center/63.0.1857.1080@63.0.1857.1080" timestamp="1593775069645" />
+    <state width="1373" height="173" key="GridCell.Tab.0.left" timestamp="1593775069645">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1797" height="285" key="GridCell.Tab.0.left/63.0.1857.1080@63.0.1857.1080" timestamp="1593691578961" />
-    <state width="1797" height="285" key="GridCell.Tab.0.right" timestamp="1593691578961">
+    <state width="1373" height="173" key="GridCell.Tab.0.left/63.0.1857.1080@63.0.1857.1080" timestamp="1593775069645" />
+    <state width="1373" height="173" key="GridCell.Tab.0.right" timestamp="1593775069645">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1797" height="285" key="GridCell.Tab.0.right/63.0.1857.1080@63.0.1857.1080" timestamp="1593691578961" />
-    <state width="1797" height="368" key="GridCell.Tab.1.bottom" timestamp="1593607739138">
+    <state width="1373" height="173" key="GridCell.Tab.0.right/63.0.1857.1080@63.0.1857.1080" timestamp="1593775069645" />
+    <state width="1361" height="359" key="GridCell.Tab.1.bottom" timestamp="1593751344488">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1797" height="368" key="GridCell.Tab.1.bottom/63.0.1857.1080@63.0.1857.1080" timestamp="1593607739138" />
-    <state width="1797" height="368" key="GridCell.Tab.1.center" timestamp="1593607739138">
+    <state width="1361" height="359" key="GridCell.Tab.1.bottom/63.0.1857.1080@63.0.1857.1080" timestamp="1593751344488" />
+    <state width="1361" height="359" key="GridCell.Tab.1.center" timestamp="1593751344487">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1797" height="368" key="GridCell.Tab.1.center/63.0.1857.1080@63.0.1857.1080" timestamp="1593607739138" />
-    <state width="1797" height="368" key="GridCell.Tab.1.left" timestamp="1593607739138">
+    <state width="1361" height="359" key="GridCell.Tab.1.center/63.0.1857.1080@63.0.1857.1080" timestamp="1593751344487" />
+    <state width="1361" height="359" key="GridCell.Tab.1.left" timestamp="1593751344487">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1797" height="368" key="GridCell.Tab.1.left/63.0.1857.1080@63.0.1857.1080" timestamp="1593607739138" />
-    <state width="1797" height="368" key="GridCell.Tab.1.right" timestamp="1593607739138">
+    <state width="1361" height="359" key="GridCell.Tab.1.left/63.0.1857.1080@63.0.1857.1080" timestamp="1593751344487" />
+    <state width="1361" height="359" key="GridCell.Tab.1.right" timestamp="1593751344488">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1797" height="368" key="GridCell.Tab.1.right/63.0.1857.1080@63.0.1857.1080" timestamp="1593607739138" />
+    <state width="1361" height="359" key="GridCell.Tab.1.right/63.0.1857.1080@63.0.1857.1080" timestamp="1593751344488" />
     <state x="514" y="295" key="Maven.ArtifactSearchDialog" timestamp="1593592143636">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
     <state x="514" y="295" key="Maven.ArtifactSearchDialog/63.0.1857.1080@63.0.1857.1080" timestamp="1593592143636" />
-    <state x="709" y="193" key="SettingsEditor" timestamp="1593604288314">
+    <state x="709" y="193" key="SettingsEditor" timestamp="1593772977699">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state x="709" y="193" key="SettingsEditor/63.0.1857.1080@63.0.1857.1080" timestamp="1593604288314" />
+    <state x="709" y="193" key="SettingsEditor/63.0.1857.1080@63.0.1857.1080" timestamp="1593772977699" />
     <state x="1076" y="334" key="extract.method.dialog" timestamp="1593686606887">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
     <state x="1076" y="334" key="extract.method.dialog/63.0.1857.1080@63.0.1857.1080" timestamp="1593686606887" />
-    <state x="737" y="458" width="647" height="534" key="find.popup" timestamp="1593688962195">
+    <state x="737" y="458" width="647" height="534" key="find.popup" timestamp="1593773883658">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state x="737" y="458" width="647" height="534" key="find.popup/63.0.1857.1080@63.0.1857.1080" timestamp="1593688962195" />
+    <state x="737" y="458" width="647" height="534" key="find.popup/63.0.1857.1080@63.0.1857.1080" timestamp="1593773883658" />
     <state x="359" y="341" key="new project wizard" timestamp="1593654196171">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
     <state x="359" y="341" key="new project wizard/63.0.1857.1080@63.0.1857.1080" timestamp="1593654196171" />
+    <state x="648" y="250" key="run.anything.popup" timestamp="1593765182368">
+      <screen x="63" y="0" width="1857" height="1080" />
+    </state>
+    <state x="648" y="250" key="run.anything.popup/63.0.1857.1080@63.0.1857.1080" timestamp="1593765182368" />
     <state x="647" y="331" width="672" height="678" key="search.everywhere.popup" timestamp="1593596588725">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>

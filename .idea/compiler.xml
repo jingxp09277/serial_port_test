@@ -9,5 +9,6 @@
         <module name="serial_test" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>

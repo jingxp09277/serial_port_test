@@ -1,23 +1,19 @@
 package gui.frame;
 
-import javax.swing.*;
-
 import gui.form.MainFrom;
 import gui.form.SettingForm;
-import gui.panel.MainPanel;
-import gui.panel.SpendPanel;
 
-import java.awt.*;
+import javax.swing.*;
 
-public class MainFrame extends JFrame{
+public class MainFrame extends JFrame {
     public static MainFrame instance = new MainFrame();
     public JPanel mainFramePanel = new JPanel();
 
     public JPanel mainFromPanel = MainFrom.instance.getRootForm();
-    public JPanel settingFormPanel  = SettingForm.instance.getRootForm();
+    public JPanel settingFormPanel = SettingForm.instance.getRootForm();
 
-    private MainFrame(){
-        this.setSize(800,600);
+    private MainFrame() {
+        this.setSize(800, 600);
         this.setTitle("串口测试");
         //this.setContentPane(MainPanel.instance);
         this.setLocationRelativeTo(null);
