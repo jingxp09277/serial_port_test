@@ -137,14 +137,18 @@ public class MainFrom {
 
                     if (identifyingCmd > 0) {
 
-                        if (recognizedCmd.equals(cmdAndResults[identifyingCmd - 1].getSericalPortProtocolValue())) {
+                        if (isEqualsExcludeMaskBit(recognizedCmd, cmdAndResults[identifyingCmd - 1].getSericalPortProtocolValue(),
+                                cmdAndResults[identifyingCmd - 1].getMaskBit()
+                        )) {
                             cmdAndResults[identifyingCmd - 1].setReusltTimes(
                                     cmdAndResults[identifyingCmd - 1].getReusltTimes() + 1
                             );
                             isComfrimCmd = true;
                         } else {
                             for (CmdAndResult cmdAndResult : cmdAndResults) {
-                                if (recognizedCmd.equals(cmdAndResult.getSericalPortProtocolValue())) {
+                                if (isEqualsExcludeMaskBit(recognizedCmd, cmdAndResult.getSericalPortProtocolValue(),
+                                        cmdAndResult.getMaskBit()
+                                )) {
                                     cmdAndResults[identifyingCmd - 1].setFalseWakeTimes(
                                             cmdAndResults[identifyingCmd - 1].getFalseWakeTimes() + 1);
                                     isComfrimCmd = true;
@@ -163,6 +167,20 @@ public class MainFrom {
         }
     }
 
+    public Boolean isEqualsExcludeMaskBit(ArrayList<Byte> alA, ArrayList<Byte> alB, HashSet<Integer> maskBit) {
+        if (alA.size() != alB.size()) {
+            return false;
+        }
+        for (int i = 0; i < alA.size(); i++) {
+            if (!maskBit.contains(i)) {
+                if (!alA.get(i).equals(alB.get(i))) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    
     public void playAudio() {
         isComfrimCmd = true;
         startPlayMusic_flag = true;
