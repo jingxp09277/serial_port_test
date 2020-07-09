@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import static util.StringUtil.hexStringsToByte;
@@ -78,6 +79,7 @@ public class ExecelUtil {
                     }
                     arrayList.add(hexStringsToByte(arr[j])[0]);
 //                            ss.toUpperCase());
+
                 }
                 mCmdAndResult.setMaskBit(integerSet);
                 mCmdAndResult.setSericalPortProtocolValue(arrayList);//命令词指令值

@@ -15,6 +15,9 @@ import java.io.FileFilter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashSet;
+
+import static util.SerialPortUtil.printHexString;
 
 public class MainFrom {
     public static MainFrom instance = new MainFrom();
@@ -83,7 +86,8 @@ public class MainFrom {
                     try {
                         while (inputStream.available() > 0) {
                             nBytes = inputStream.read(readB);
-                            //printHexString(readB, nBytes);
+                            printHexString(readB, nBytes);
+                            System.out.println();
                             //TODO
                             dealwithSerialPortValue(readB, nBytes);
                         }
@@ -112,9 +116,10 @@ public class MainFrom {
 
     ArrayList<Byte> recognizedCmd = new ArrayList<Byte>();
 
+    boolean start = false;
+    boolean last = false;
     private void dealwithSerialPortValue(byte[] b, int nBytes) {
-        boolean start = false;
-        boolean last = false;
+
         //以excel中第一个命令的开头和结尾为基准，分割串口读取的byte[]。
         ArrayList<Byte> cmd = cmdAndResults[0].getSericalPortProtocolValue();
         for (int i = 0; i < nBytes; i++) {
