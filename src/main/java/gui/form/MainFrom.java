@@ -15,6 +15,7 @@ import java.io.FileFilter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 
 import static util.SerialPortUtil.printHexString;
@@ -46,9 +47,10 @@ public class MainFrom {
                 stopListenSericalPort_flag = false;
                 stopListenSerialPort();
                 startPlayMusic_flag = false;
-                if (player.isPlaying()) {
-                    player.stop();
-                    player.dispose();
+                if (player != null) {
+                    if (player.isPlaying()) {
+                        player.stop();
+                    }
                 }
                 mPlayMusicThread.interrupt();
             }
@@ -118,6 +120,7 @@ public class MainFrom {
 
     boolean start = false;
     boolean last = false;
+
     private void dealwithSerialPortValue(byte[] b, int nBytes) {
 
         //以excel中第一个命令的开头和结尾为基准，分割串口读取的byte[]。
@@ -185,7 +188,7 @@ public class MainFrom {
         }
         return true;
     }
-    
+
     public void playAudio() {
         isComfrimCmd = true;
         startPlayMusic_flag = true;
@@ -229,10 +232,10 @@ public class MainFrom {
 
                                     isComfrimCmd = false;
                                     try {
-
                                         player = new AudioPlayer(music.toURI().toURL());
                                         player.play();
-                                        Thread.sleep(3000);
+                                        System.out.println( new Date() +"Thread "+mPlayMusicThread.getName()+" player ");
+                                        Thread.sleep(6000);
                                     } catch (IOException | InterruptedException | UnsupportedAudioFileException | LineUnavailableException e) {
                                         e.printStackTrace();
                                     }

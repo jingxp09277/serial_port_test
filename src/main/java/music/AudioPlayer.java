@@ -4,8 +4,6 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
-import java.io.File;
-import java.io.FileFilter;
 import java.io.IOException;
 import java.net.URL;
 
@@ -49,28 +47,6 @@ public class AudioPlayer {
         } finally {
             clip = null;
         }
-    }
-
-    public static void main(String[] args) throws IOException, UnsupportedAudioFileException, LineUnavailableException, InterruptedException {
-        AudioPlayer player;
-
-        File[] musicFiles = new File("C:\\Users\\LWB\\Desktop\\新建文件夹 (6)\\gql").listFiles(new FileFilter() {
-            @Override
-            public boolean accept(File pathname) {
-                return pathname.getName().toLowerCase().endsWith(".wav");
-            }
-        });
-
-
-        for (File music : musicFiles) {
-            player = new AudioPlayer(music.toURI().toURL());
-            player.play();
-
-        }
-//        File music = musicFiles[2];
-//        System.out.println("music "+music.getName());
-//        player = new AudioPlayer(music.toURI().toURL());
-//            player.play();
     }
 
 }

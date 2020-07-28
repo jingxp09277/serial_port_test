@@ -75,7 +75,7 @@ public class ExecelUtil {
                 ) {
                     if(arr[j].equals("XX")){
                         integerSet.add(j);
-                        System.out.println("heeeee"+integerSet.toString());
+//                        System.out.println("heeeee"+integerSet.toString());
                     }
                     arrayList.add(hexStringsToByte(arr[j])[0]);
 //                            ss.toUpperCase());
