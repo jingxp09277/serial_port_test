@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ff2165b-53af-40a7-a045-4351f27e687f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/form/MyThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd.xls" beforeDir="false" afterPath="$PROJECT_DIR$/cmd.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/serial_test_jar/serial_test.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/serial_test_jar/serial_test.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/form/MainFrom.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/form/MainFrom.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/form/MainFrom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/form/MainFrom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/music/AudioPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/music/AudioPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/ExecelUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ExecelUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/serial_test.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/form/MainFrom$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/form/MainFrom$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/form/MainFrom$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/form/MainFrom$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/form/MainFrom$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/form/MainFrom$3$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/form/MainFrom$3$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/form/MainFrom$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/form/MainFrom$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/form/MainFrom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/form/MainFrom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/ExecelUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/ExecelUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/music/AudioPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/music/AudioPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/serial_test.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +79,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="gui.form" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\java_Project\serial_test\lib" />
     </key>
@@ -175,7 +179,10 @@
       <workItem from="1595858960754" duration="73000" />
       <workItem from="1595905580499" duration="648000" />
       <workItem from="1595906658567" duration="62000" />
-      <workItem from="1595906746678" duration="12429000" />
+      <workItem from="1595906746678" duration="13122000" />
+      <workItem from="1596074142877" duration="7136000" />
+      <workItem from="1596437536524" duration="3814000" />
+      <workItem from="1596441387990" duration="351000" />
     </task>
     <servers />
   </component>
@@ -200,10 +207,10 @@
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
     <state x="1071" y="345" key="#Project_Structure/63.0.1857.1080@63.0.1857.1080" timestamp="1595907049424" />
-    <state x="1289" y="359" key="#com.intellij.ide.util.MemberChooser" timestamp="1595930087197">
+    <state x="1289" y="359" key="#com.intellij.ide.util.MemberChooser" timestamp="1596080379894">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state x="1289" y="359" key="#com.intellij.ide.util.MemberChooser/63.0.1857.1080@63.0.1857.1080" timestamp="1595930087197" />
+    <state x="1289" y="359" key="#com.intellij.ide.util.MemberChooser/63.0.1857.1080@63.0.1857.1080" timestamp="1596080379894" />
     <state x="959" y="402" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1593775315346">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
@@ -228,22 +235,22 @@
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
     <state x="1074" y="296" key="FileChooserDialogImpl/63.0.1857.1080@63.0.1857.1080" timestamp="1593591960920" />
-    <state width="1373" height="438" key="GridCell.Tab.0.bottom" timestamp="1595930938355">
+    <state width="1373" height="234" key="GridCell.Tab.0.bottom" timestamp="1596441356089">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1373" height="438" key="GridCell.Tab.0.bottom/63.0.1857.1080@63.0.1857.1080" timestamp="1595930938355" />
-    <state width="1373" height="438" key="GridCell.Tab.0.center" timestamp="1595930938355">
+    <state width="1373" height="234" key="GridCell.Tab.0.bottom/63.0.1857.1080@63.0.1857.1080" timestamp="1596441356089" />
+    <state width="1373" height="234" key="GridCell.Tab.0.center" timestamp="1596441356089">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1373" height="438" key="GridCell.Tab.0.center/63.0.1857.1080@63.0.1857.1080" timestamp="1595930938355" />
-    <state width="1373" height="438" key="GridCell.Tab.0.left" timestamp="1595930938355">
+    <state width="1373" height="234" key="GridCell.Tab.0.center/63.0.1857.1080@63.0.1857.1080" timestamp="1596441356089" />
+    <state width="1373" height="234" key="GridCell.Tab.0.left" timestamp="1596441356089">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1373" height="438" key="GridCell.Tab.0.left/63.0.1857.1080@63.0.1857.1080" timestamp="1595930938355" />
-    <state width="1373" height="438" key="GridCell.Tab.0.right" timestamp="1595930938355">
+    <state width="1373" height="234" key="GridCell.Tab.0.left/63.0.1857.1080@63.0.1857.1080" timestamp="1596441356089" />
+    <state width="1373" height="234" key="GridCell.Tab.0.right" timestamp="1596441356089">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1373" height="438" key="GridCell.Tab.0.right/63.0.1857.1080@63.0.1857.1080" timestamp="1595930938355" />
+    <state width="1373" height="234" key="GridCell.Tab.0.right/63.0.1857.1080@63.0.1857.1080" timestamp="1596441356089" />
     <state width="1361" height="359" key="GridCell.Tab.1.bottom" timestamp="1593777453569">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
@@ -288,9 +295,9 @@
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
     <state x="648" y="250" key="run.anything.popup/63.0.1857.1080@63.0.1857.1080" timestamp="1593765182368" />
-    <state x="647" y="331" width="672" height="678" key="search.everywhere.popup" timestamp="1594722932171">
+    <state x="647" y="331" width="672" height="678" key="search.everywhere.popup" timestamp="1596076471014">
       <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state x="647" y="331" width="672" height="678" key="search.everywhere.popup/63.0.1857.1080@63.0.1857.1080" timestamp="1594722932171" />
+    <state x="647" y="331" width="672" height="678" key="search.everywhere.popup/63.0.1857.1080@63.0.1857.1080" timestamp="1596076471014" />
   </component>
 </project>

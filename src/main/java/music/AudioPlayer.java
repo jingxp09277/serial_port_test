@@ -11,6 +11,7 @@ public class AudioPlayer {
 
     private Clip clip;
     private URL url;
+    private int framePosition;
 
     public AudioPlayer(URL url) {
         this.url = url;
@@ -31,6 +32,17 @@ public class AudioPlayer {
             clip.setFramePosition(0);
             clip.start();
         }
+    }
+
+    public void pause(){
+        framePosition = clip.getFramePosition();
+        clip.stop();
+    }
+
+
+    public void resume(){
+        clip.setFramePosition(framePosition);
+        clip.start();
     }
 
     public void stop() {

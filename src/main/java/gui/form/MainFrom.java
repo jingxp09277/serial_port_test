@@ -10,10 +10,8 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileFilter;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
@@ -36,11 +34,22 @@ public class MainFrom {
 
     private JPanel rootForm;
     private JTextArea textArea1;
+    private JButton bt_pause;
     CmdAndResult[] cmdAndResults;
     AudioPlayer player;
     Thread mPlayMusicThread;
+    boolean Flag_one = true;
+
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+    String logPath = null;
+
+    String playNowName = null;
 
     public MainFrom() {
+        Date nowDate = new Date();
+        String str = sdf.format(nowDate);
+        logPath = ".\\log " + str + ".txt";
+
         bt_back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -52,7 +61,27 @@ public class MainFrom {
                         player.stop();
                     }
                 }
-                mPlayMusicThread.interrupt();
+                if (mPlayMusicThread != null) {
+                    mPlayMusicThread.interrupt();
+                }
+            }
+        });
+
+        bt_pause.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (player != null && mPlayMusicThread != null) {
+                    if (Flag_one) {
+                        mPlayMusicThread.suspend();
+                        bt_pause.setText("继续");
+                        Flag_one = false;
+                    } else {
+                        //mPlayMusicThread.resumeThread();
+                        mPlayMusicThread.resume();
+                        bt_pause.setText("暂停");
+                        Flag_one = true;
+                    }
+                }
             }
         });
     }
@@ -159,6 +188,12 @@ public class MainFrom {
                                 )) {
                                     cmdAndResults[identifyingCmd - 1].setFalseWakeTimes(
                                             cmdAndResults[identifyingCmd - 1].getFalseWakeTimes() + 1);
+                                    //wirte log
+                                    try {
+                                        writeLog2Logfile("当前命令：" + cmdAndResults[identifyingCmd - 1].getCmd() + " 误识别命令：" + cmdAndResult.getCmd() + " 音频：" + playNowName);
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
                                     isComfrimCmd = true;
                                     break;
                                 }
@@ -192,73 +227,102 @@ public class MainFrom {
     public void playAudio() {
         isComfrimCmd = true;
         startPlayMusic_flag = true;
-        mPlayMusicThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+        if (mPlayMusicThread == null) {
+            System.out.println("test1122221");
+            mPlayMusicThread = new Thread(
+                    () -> {
+                        try {
+                            Thread.sleep(2000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
 
 
-                System.out.println("test11111");
+                        System.out.println("test11111");
 
-                File[] musicFiles = new File(SettingForm.instance.musicFilePath).listFiles(new FileFilter() {
-                    @Override
-                    public boolean accept(File pathname) {
-                        return pathname.getName().toLowerCase().endsWith(".wav");
-                    }
-                });
+                        File[] musicFiles = new File(SettingForm.instance.musicFilePath).listFiles(new FileFilter() {
+                            @Override
+                            public boolean accept(File pathname) {
+                                return pathname.getName().toLowerCase().endsWith(".wav");
+                            }
+                        });
 
 
-                //每播放一个音频前，先去和所有的命令词对比一遍，通过命令词确认是哪个命令词。
-                //确认后，下次播放前先检查是否有被确认，未被确认漏测加一。
-                if (musicFiles != null) {
-                    for (File music : musicFiles) {
-                        if (startPlayMusic_flag) {
+                        //每播放一个音频前，先去和所有的命令词对比一遍，通过命令词确认是哪个命令词。
+                        //确认后，下次播放前先检查是否有被确认，未被确认漏测加一。
+                        if (musicFiles != null) {
+                            for (File music : musicFiles) {
+                                if (startPlayMusic_flag) {
+                                    if (!isComfrimCmd) {
+                                        if (identifyingCmd > 0) {
+                                            cmdAndResults[identifyingCmd - 1].setMissingTimes(
+                                                    cmdAndResults[identifyingCmd - 1].getMissingTimes() + 1
+                                            );
+                                            //wirte log
+                                            try {
+                                                writeLog2Logfile("漏识别命令：" + cmdAndResults[identifyingCmd - 1].getCmd() + " 音频：" + playNowName);
+                                            } catch (IOException e) {
+                                                e.printStackTrace();
+                                            }
+                                            updateShowResult();
+                                        }
+                                    }
+
+                                    for (CmdAndResult cmdAndResult : cmdAndResults) {
+                                        if (music.getName().contains(cmdAndResult.getCmd())) {
+                                            identifyingCmd = cmdAndResult.getCmdIndex();
+
+                                            isComfrimCmd = false;
+                                            try {
+                                                playNowName = music.getName();
+                                                player = new AudioPlayer(music.toURI().toURL());
+                                                player.play();
+                                                System.out.println(new Date() + "Thread " + mPlayMusicThread.getName() + " player ");
+                                                Thread.sleep(7000);
+                                            } catch (IOException | InterruptedException | UnsupportedAudioFileException | LineUnavailableException e) {
+                                                e.printStackTrace();
+                                            }
+                                            break;
+                                        } else {
+                                            identifyingCmd = 0;
+                                        }
+                                    }
+
+                                }
+                            }
                             if (!isComfrimCmd) {
                                 if (identifyingCmd > 0) {
                                     cmdAndResults[identifyingCmd - 1].setMissingTimes(
                                             cmdAndResults[identifyingCmd - 1].getMissingTimes() + 1
                                     );
                                     updateShowResult();
-                                }
-                            }
 
-                            for (CmdAndResult cmdAndResult : cmdAndResults) {
-                                if (music.getName().contains(cmdAndResult.getCmd())) {
-                                    identifyingCmd = cmdAndResult.getCmdIndex();
-
-                                    isComfrimCmd = false;
+                                    //wirte log
                                     try {
-                                        player = new AudioPlayer(music.toURI().toURL());
-                                        player.play();
-                                        System.out.println( new Date() +"Thread "+mPlayMusicThread.getName()+" player ");
-                                        Thread.sleep(6000);
-                                    } catch (IOException | InterruptedException | UnsupportedAudioFileException | LineUnavailableException e) {
+                                        writeLog2Logfile("漏识别命令：" + cmdAndResults[identifyingCmd - 1].getCmd() + " 音频：" + playNowName);
+                                    } catch (IOException e) {
                                         e.printStackTrace();
                                     }
-                                    break;
-                                } else {
-                                    identifyingCmd = 0;
+
                                 }
                             }
 
                         }
-                    }
-                    if (!isComfrimCmd) {
-                        if (identifyingCmd > 0) {
-                            cmdAndResults[identifyingCmd - 1].setMissingTimes(
-                                    cmdAndResults[identifyingCmd - 1].getMissingTimes() + 1
-                            );
-                            updateShowResult();
-                        }
-                    }
+                    });
+            mPlayMusicThread.start();
+        }
 
-                }
-            }
-        });
-        mPlayMusicThread.start();
+    }
+
+    void writeLog2Logfile(String str) throws IOException {
+        File file = new File(logPath);
+        if (!file.exists()) {
+            file.createNewFile();
+        }
+
+        PrintWriter pw = new PrintWriter(new FileWriter(file, true));
+        pw.println(str);
+        pw.flush();
+        pw.close();
     }
 }
